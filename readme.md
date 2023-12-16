@@ -12,5 +12,5 @@ packages:
   - htop
 runcmd:
  - [ sh, -c, echo "========= cloud-init-demo -- webserver =========" ]
- - [ sh, -c, ansible-pull "-U https://github.com/hhansen06/cloud-init-demo playbook-webserver.yml" ]
+ - ansible-pull -U https://github.com/hhansen06/cloud-init-demo -d /opt/org/repo playbook-webserver.yml
 ```
