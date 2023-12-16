@@ -8,9 +8,9 @@ package_upgrade: false
 
 packages:
   - git
-ansible:
-  install_method: pip
-  pull:
-    url: "github.com/hhansen06/cloud-init-demo.git"
-    playbook_name: playbook-webserver.yml
+  - ansible
+  - htop
+runcmd:
+ - [ sh, -c, echo "========= cloud-init-demo -- webserver =========" ]
+ - [ sh, -c, ansible-pull "-U https://github.com/hhansen06/cloud-init-demo playbook-webserver.yml" ]
 ```
