@@ -1,6 +1,7 @@
 # cloud-init demo with ansible-pull
 
 Run the Demo with the following cloud-init code:
+```
 #cloud-config
 package_update: true
 package_upgrade: true
@@ -12,5 +13,6 @@ packages:
 ansible:
   install_method: pip
   pull:
-    url: "https://github.com/holmanb/vmboot.git"
-    playbook_name: ubuntu.yml
+    url: "github.com/hhansen06/cloud-init-demo.git"
+    playbook_name: playbook-webserver.yml
+```
