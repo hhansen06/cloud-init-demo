@@ -10,6 +10,7 @@ package_upgrade: true
 # to your package manager
 packages:
   - git
+  - ansible
 ansible:
   install_method: pip
   pull:
