@@ -1,0 +1,13 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  become: true
+  tasks:
+    - name: "install packages"
+      apt:
+        pkg:
+          - apache2
+    - name: Copy using inline content
+      ansible.builtin.copy:
+        content: "Host: {{ ansible_hostname }}"
+        dest: /var/www/html/index.html
