@@ -3,10 +3,6 @@
   connection: local
   become: true
   tasks:
-    - name: "install packages"
-      apt:
-        pkg:
-          - apache2
     - name: Check if Docker is installed
       become: yes
       command: docker -v 
@@ -69,3 +65,14 @@
         groups: docker 
         append: true 
       when: docker_group is changed
+
+    - name: Re-create a redis container
+      community.docker.docker_container:
+        name: rancher
+        image: rancher/rancher
+        state: present
+        privileged: true
+        exposed_ports:
+          - 80
+          - 443
+    
