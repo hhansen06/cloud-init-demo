@@ -70,7 +70,7 @@
       community.docker.docker_container:
         name: rancher
         image: rancher/rancher
-        state: present
+        state: started
         privileged: true
         exposed_ports:
           - 80
