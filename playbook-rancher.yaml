@@ -65,7 +65,7 @@
     - name: Add User to docker group
       become: yes
       ansible.builtin.user:
-        name: yourUser
+        name: debian
         groups: docker 
         append: true 
       when: docker_group is changed
