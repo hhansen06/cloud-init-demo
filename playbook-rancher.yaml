@@ -7,14 +7,16 @@
       apt:
         pkg:
           - apache2
-
+    - name: Check if Docker is installed
+      become: yes
+      command: docker -v 
+      register: docker_installed
+      ignore_errors: true
     - name: Install Docker 
       become: yes
       block:
         - name: Add Docker's official GPG key
           block:
-            - name: Update apt
-              include_tasks: apt.yml
             - name: Install necessary packages
               become: yes
               ansible.builtin.apt:
