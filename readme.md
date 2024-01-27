@@ -9,7 +9,6 @@ package_upgrade: false
 packages:
   - git
   - ansible
-  - htop
 runcmd:
  - [ sh, -c, echo "========= cloud-init-demo -- webserver =========" ]
  - ansible-pull -U https://github.com/hhansen06/cloud-init-demo -d /opt/org/repo playbook-webserver.yml
@@ -25,7 +24,6 @@ package_upgrade: false
 packages:
   - git
   - ansible
-  - htop
 runcmd:
  - [ sh, -c, echo "========= cloud-init-demo -- rancher =========" ]
  - ansible-pull -U https://github.com/hhansen06/cloud-init-demo -d /opt/org/repo playbook-rancher.yml
