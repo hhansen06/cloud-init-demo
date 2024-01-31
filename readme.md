@@ -7,7 +7,6 @@ Run the Demo with the following cloud-init code:
 package_update: true
 package_upgrade: false
 users:
-  - default
   - name: kim
     passwd: "$6$kW4vfBM9kGgq4hr$TFtHW7.3jOECR9UCBuw9NrdSMJETzSVoNQGcVv2y.RqRUzWDEtYhYRkGvIpB6ml1fh/fZEVIgKbSXI9L1B6xF."
     shell: /bin/bash
