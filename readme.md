@@ -1,6 +1,6 @@
 # cloud-init demo with ansible-pull
 ## Example #1: Install Webserver (apache2) and add hostname to index.html
-Also creates a user called kim with password possible
+Also creates a user called kim with password possible.
 Run the Demo with the following cloud-init code:
 ```
 #cloud-config
